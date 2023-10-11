@@ -7,6 +7,8 @@
 import library.Books;
 import library.Library;
 
+import java.awt.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 
@@ -135,7 +137,11 @@ public class ClerkMenuUI extends javax.swing.JFrame {
         jButton1.setText("OK");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                try {
+                    jButton1MouseClicked(evt);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -179,6 +185,7 @@ public class ClerkMenuUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
+        getContentPane().setBackground(Color.lightGray);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -405,7 +412,7 @@ public class ClerkMenuUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UserFineIdTextFieldActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) throws SQLException {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         int choice = Integer.parseInt(ClerkChoiceTextField.getText());
         
