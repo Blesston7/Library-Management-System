@@ -9,13 +9,13 @@ import library.Library;
 import library.StudentMenuUI;
 import library.dbConnectivity;
 
+import java.awt.*;
+
 public class LoginUI extends javax.swing.JFrame {
 
     public LoginUI() {
         initComponents();
     }
-
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -31,7 +31,6 @@ public class LoginUI extends javax.swing.JFrame {
         LogInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jLabel1.setText("Library Management System");
 
         jLabel2.setText("Role");
@@ -61,6 +60,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
+        getContentPane().setBackground(Color.GRAY);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
