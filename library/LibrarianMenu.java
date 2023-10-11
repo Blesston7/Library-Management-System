@@ -5,6 +5,8 @@
  */
 package library;
 
+import java.awt.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class LibrarianMenu extends javax.swing.JFrame {
@@ -130,7 +132,11 @@ public class LibrarianMenu extends javax.swing.JFrame {
         jButton1.setText("OK");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                try {
+                    jButton1MouseClicked(evt);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -304,6 +310,7 @@ public class LibrarianMenu extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
+        getContentPane().setBackground(Color.lightGray);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -627,7 +634,7 @@ public class LibrarianMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) throws SQLException {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         
         

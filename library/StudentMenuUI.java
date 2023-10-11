@@ -7,6 +7,8 @@ package library;
 
 
 
+import java.awt.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class StudentMenuUI extends javax.swing.JFrame {
@@ -58,7 +60,11 @@ public class StudentMenuUI extends javax.swing.JFrame {
         jButton1.setText("OK!");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                try {
+                    jButton1MouseClicked(evt);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -70,6 +76,7 @@ public class StudentMenuUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
+        getContentPane().setBackground(Color.lightGray);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -143,7 +150,7 @@ public class StudentMenuUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) throws SQLException {//GEN-FIRST:event_jButton1MouseClicked
         
         int choice = Integer.parseInt(UserChoiceTextField.getText());
        // Library obj = new Library ();

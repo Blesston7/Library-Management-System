@@ -5,10 +5,8 @@
  */
 package library;
 
+import java.sql.SQLException;
 import java.util.*;
-import java.io.*;
-
-
 public class Library {
     
     public static ArrayList<Users> UsersList;
@@ -165,8 +163,7 @@ public class Library {
      
      
      
-     public ArrayList <Books>ClerkSearchBookbyTitle(String title, int clerk_id)
-     {
+     public ArrayList <Books>ClerkSearchBookbyTitle(String title, int clerk_id) throws SQLException {
          ArrayList <Books> SelectedBooks = new ArrayList <>();
      
          for (int i=0; i < ClerkList.size() ; i++)
@@ -387,8 +384,7 @@ public class Library {
      
     
      
-     ArrayList <Books>LibrarianSearchBookbyTitle(String title, int clerk_id)
-     {
+     ArrayList <Books>LibrarianSearchBookbyTitle(String title, int clerk_id) throws SQLException {
          ArrayList <Books> SelectedBooks = new ArrayList <>();
      
          for (int i=0; i < LibrarianList.size() ; i++)

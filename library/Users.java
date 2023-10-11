@@ -5,6 +5,7 @@
  */
 package library;
 
+import java.sql.SQLException;
 import java.util.*;
 import java.io.*;
 
@@ -33,7 +34,7 @@ abstract class Users {
 
     }
 
-    public ArrayList<Books> SearchBookbyTitle(String title) {
+    public ArrayList<Books> SearchBookbyTitle(String title) throws SQLException {
 //        for (Books b : BooksList) {
 //            String titleofcurrentbook = b.GetTitle();
 //            if (titleofcurrentbook.contains(title) == true) {

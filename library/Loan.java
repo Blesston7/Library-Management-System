@@ -5,6 +5,7 @@
  */
 package library;
 
+import java.sql.SQLException;
 import java.util.*;
 import java.io.*;
 import java.util.Date;
@@ -190,7 +191,7 @@ public class Loan {
         db.SetLoanFineStatus(loanId, status);
     }
 
-    public boolean GetLoan(ArrayList<Books> BooksList, Borrower Loanee, ArrayList<Users> Borrowers, Staff AdminBody, ArrayList<Loan> LoanList) {
+    public boolean GetLoan(ArrayList<Books> BooksList, Borrower Loanee, ArrayList<Users> Borrowers, Staff AdminBody, ArrayList<Loan> LoanList) throws SQLException {
         System.out.print("Search the book here \n Press 1. to search with title \n Press 2. to search by author name \n 3. to search by subject\n ");
         Scanner input = new Scanner(System.in);
         boolean status = false;
